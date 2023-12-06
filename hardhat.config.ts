@@ -4,7 +4,10 @@ import { config as dotEnvConfig } from "dotenv";
 
 dotEnvConfig();
 
-
+const mnemonic = process.env.MNEMONIC;
+if (!mnemonic) {
+  throw new Error("Please configure a MNEMONIC in a .env file");
+}
 
 const config: HardhatUserConfig = {
   solidity: "0.8.20",
@@ -14,7 +17,7 @@ const config: HardhatUserConfig = {
       url: "https://smart.zeniq.network:9545",
       chainId: 383414847825,
       accounts: {
-        mnemonic: process.env.MNEMONIC,
+        mnemonic,
       }
     },
   }

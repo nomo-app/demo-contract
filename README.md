@@ -33,4 +33,4 @@ npm run compile
 npm run test
 ```
 
-If you need ZENIQ for paying transactions fee, then we recommend the [Faucet WebOn](https://nomo.app/faucet) for the Nomo App.
+If you need ZENIQ for paying transaction fees, then we recommend the [Faucet WebOn](https://nomo.app/faucet) for the Nomo App.
