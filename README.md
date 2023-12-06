@@ -34,3 +34,10 @@ npm run test
 ```
 
 If you need ZENIQ for paying transaction fees, then we recommend the [Faucet WebOn](https://nomo.app/faucet) for the Nomo App.
+
+## Nomo App Sign Security Dialog
+
+In order to make transactions human-readable, the Nomo App needs to know the function names of your Smart Contract functions.
+
+For many Smart Contracts, the Nomo App works perfectly out of the box.
+However, if the Nomo App is not able to tell your function names, then we invite you to submit an ABI-pull-request to the [walletkit-dart](https://github.com/nomo-app/walletkit-dart).
