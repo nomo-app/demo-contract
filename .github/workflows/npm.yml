@@ -2,11 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    branches:
-      - new_contract
   pull_request:
-    branches:
-      - new_contract
 
 env:
   MNEMONIC: ${{ secrets.MNEMONIC }}
