@@ -20,7 +20,7 @@ npm install
 Make sure to create a `.env` file in the root directory of this project and add the following variables:
 
 ```bash
-MNEMONIC="your mnemonic"
+MNEMONIC=your mnemonic of 12 words
 ```
 
 This mnemonic is used to deploy the contract.
