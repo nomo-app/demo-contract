@@ -1,10 +1,10 @@
 import { ethers } from "hardhat";
 import { expect } from "chai";
-import { Contract } from "ethers";
 import { DemoContract } from "../typechain-types";
 
-describe("DemoContract", function () {
 
+
+describe("DemoContract Test1 ", function () {
 
     let demoContract: DemoContract;
 
@@ -13,11 +13,11 @@ describe("DemoContract", function () {
         demoContract = await DemoContract.deploy();
     });
 
-    it("Should mint ", async function () {
+    it("Should mint", async function () {
         const address = await demoContract.getAddress();
-        const tx = await demoContract.mint(address, 50);
+        const sampleBytesArray = [ethers.toUtf8Bytes('ArrayElement1'), ethers.toUtf8Bytes('ArrayElement2')];
+        const tx = await demoContract.mint(address, 50, sampleBytesArray, true, ['0x742d35Cc6634C0532925a3b844Bc454e4438f44e', '0x742d35Cc6634C0532925a3b844Bc454e4438f44e'], 23);
         expect(tx).to.not.be.reverted;
-
     });
 
     it("Should not revert function process types", async function () {
@@ -70,3 +70,4 @@ describe("DemoContract", function () {
     });
 
 });
+

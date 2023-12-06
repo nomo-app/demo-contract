@@ -15,8 +15,22 @@ contract DemoContract is ERC20, Ownable {
         VALUE3
     }
 
-    function mint(address _to, uint256 _amount) public {
+    // This function is used to test the minting of tokens and the processing of different types of parameters
+    function mint(
+        address _to,
+        uint256 _amount,
+        bytes[] memory _amounts,
+        bool _collect,
+        address[] memory _addresses,
+        int _intParam
+    ) public {
         _mint(_to, _amount * (10 ** decimals()));
+        _addresses[0] = _to;
+        _addresses[1] = msg.sender;
+        _collect = true;
+        _amounts[0] = bytes("test");
+        _amounts[1] = bytes("test2");
+        _intParam = 12;
     }
 
     function processTypes(
