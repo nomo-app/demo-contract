@@ -32,3 +32,5 @@ To do so, run the following commands from the package.json directory:
 npm run compile
 npm run test
 ```
+
+If you need ZENIQ for paying transactions fee, then we recommend the [Faucet WebOn](https://nomo.app/faucet) for the Nomo App.
