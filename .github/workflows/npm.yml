@@ -1,0 +1,34 @@
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - new_contract
+  pull_request:
+    branches:
+      - new_contract
+
+env:
+  MNEMONIC: ${{ secrets.MNEMONIC }}
+
+jobs:
+  compile-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.17.1'
+    - name: Install dependencies
+      run: npm install
+
+    - name: compile
+      run: npm run compile
+     
+        
+    - name: run tests
+      run: npm run test
+    
+    - name: check for changes
+      run: git diff --exit-code .
