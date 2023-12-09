@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract DemoContract is ERC20, Ownable {
-    constructor() ERC20("DemoContract", "DEMO") Ownable(tx.origin) {
+    constructor() ERC20("DemoContract", "DEMO") Ownable() {
         _mint(msg.sender, 2000 * 10 ** decimals());
     }
 
