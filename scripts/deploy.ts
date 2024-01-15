@@ -1,11 +1,11 @@
 import { ethers } from "hardhat";
 
 async function main() {
-  const demoContract = await ethers.deployContract("DemoContract");
+  const priceOracle = await ethers.deployContract("PriceOracle");
 
-  const address = await demoContract.getAddress();
+  const address = await priceOracle.getAddress();
 
-  console.log("DemoContract deployed to:", address);
+  console.log("PriceOracle deployed to:", address);
 
 }
 
