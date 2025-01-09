@@ -1,22 +1,19 @@
 {
-  "name": "demo-contract",
+  "name": "game-items",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "npx hardhat compile",
-    "deploy": "tsc && npx hardhat run --network zeniq ./scripts/deploy.js",
-    "test": "npx hardhat test"
+    "compile": "hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "tsc && npx hardhat run --network zeniq ./scripts/deploy.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "dotenv": "^16.3.1",
-    "hardhat": "^2.19.1"
+    "hardhat": "^2.22.17"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.9.5"
+    "@openzeppelin/contracts": "^5.1.0"
   }
 }
